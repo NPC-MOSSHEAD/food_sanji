@@ -19,3 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+function showDetails(title, description, imageUrl) {
+    document.getElementById('food-title').innerText = title;
+    document.getElementById('food-description').innerText = description;
+    document.getElementById('food-image').src = imageUrl;
+    document.getElementById('food-details-modal').style.display = 'block';
+}
+function closeDetails() {
+    document.getElementById('food-details-modal').style.display = 'none';
+}
