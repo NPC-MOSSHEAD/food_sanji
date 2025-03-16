@@ -27,4 +27,5 @@ function showDetails(title, description, imageUrl) {
 }
 function closeDetails() {
     document.getElementById('food-details-modal').style.display = 'none';
-}
+}   
+

@@ -8,6 +8,10 @@
     font-family: "Franklin Gothic Medium", sans-serif;
 }
 
+*{
+    /* cursor: none; */
+}
+
 *::selection {
     background-color: #fff;
     color: #d9f688;
@@ -535,36 +539,39 @@ body {
     font-weight: bold;
     border-radius: 5px;
 }
-
-.details-btn {
+/* Order and Details Button - Enhanced Animations */
+.details-btn, .order-btn {
     margin-top: 10px;
     padding: 10px;
-    background-color: #95b639;
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover Effects */
+.details-btn:hover, .order-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    animation: bounce 0.4s ease infinite alternate;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+    0% { transform: scale(1.1) translateY(0); }
+    100% { transform: scale(1.15) translateY(-5px); }
+}
+
+/* Glow Effect */
 .details-btn:hover {
     background-color: #7e9a30;
-}
-
-
-.order-btn {
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #ff4500;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    box-shadow: 0px 0px 15px #95b639;
 }
 
 .order-btn:hover {
     background-color: #e03e00;
+    box-shadow: 0px 0px 15px #ff4500;
 }
-
 .modal {
     position: fixed;
     top: 50%;
